@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SG Media — Digital Growth Agency</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00e5ff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 130px 7% 80px;
+            background:
+                radial-gradient(circle at 80% 30%, rgba(0,229,255,0.15), transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(111,0,255,0.12), transparent 30%),
+                #080808;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #333;
+            border-radius: 30px;
+            color: #00e5ff;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 90px);
+            line-height: 0.98;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 19px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #00e5ff;
+            color: #000;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,229,255,0.25);
+        }
+
+        .secondary {
+            border: 1px solid #444;
+            color: white;
+        }
+
+        .secondary:hover {
+            border-color: #00e5ff;
+            color: #00e5ff;
+        }
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #888;
+            margin-bottom: 50px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+        }
+
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #888;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            border-radius: 15px;
+        }
+
+        .stat h3 {
+            font-size: 40px;
+            color: #00e5ff;
+        }
+
+        .contact {
+            text-align: center;
+            background: #0d0d0d;
+        }
+
+        .contact p {
+            color: #999;
+            max-width: 600px;
+            margin: 15px auto 30px;
+        }
+
+        footer {
+            padding: 30px 7%;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 700px) {
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .hero {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">SG<span>MEDIA</span></div>
+
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">
+                Digital Growth Agency
+            </div>
+
+            <h1>
+                We Build Brands<br>
+                That <span>Grow.</span>
+            </h1>
+
+            <p>
+                SG Media helps businesses grow through premium content,
+                social media marketing, branding and digital strategies.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="btn primary">
+                    Start a Project
+                </a>
+
+                <a href="#services" class="btn secondary">
+                    Explore Services
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="services">
+
+        <h2 class="section-title">
+            What We Do
+        </h2>
+
+        <p class="section-subtitle">
+            Everything your brand needs to grow online.
+        </p>
+
+        <div class="services">
+
+            <div class="card">
+                <div class="card-icon">🎬</div>
+                <h3>Content Creation</h3>
+                <p>
+                    Premium reels, videos and creative content
+                    designed for modern brands.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📱</div>
+                <h3>Social Media</h3>
+                <p>
+                    Strategic Instagram and Facebook management
+                    that keeps your brand active.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Meta Ads</h3>
+                <p>
+                    Performance-focused advertising campaigns
+                    designed to reach the right audience.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>Branding</h3>
+                <p>
+                    Modern visual identity and premium creative
+                    direction for your business.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2 class="section-title">
+            Built For Growth.
+        </h2>
+
+        <p class="section-subtitle">
+            We combine creativity, strategy and technology
+            to help businesses build a stronger digital presence.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3>3+</h3>
+                <p>Active Clients</p>
+            </div>
+
+            <div class="stat">
+                <h3>100%</h3>
+                <p>Creative Focus</p>
+            </div>
+
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Digital Presence</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's Build Something.
+        </h2>
+
+        <p>
+            Have a business or brand that needs better digital presence?
+            Let's talk.
+        </p>
+
+        <a
+            href="https://wa.me/918849562549"
+            class="btn primary"
+            target="_blank"
+        >
+            Chat on WhatsApp
+        </a>
+
+    </section>
+
+
+    <footer>
+        © 2026 SG Media. All rights reserved.
+    </footer>
+
+
+</body>
+</html>we Build Brands<br>
+that <span>win.</span>
+
